@@ -45,51 +45,6 @@ int in_string(char * haystack, char * needle, int is_case_insensitive) {
     return FALSE;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// int insert_string(char * haystack, size_t haystack_size, char * needle, int index) {
-//     if (haystack_size < strlen(haystack) + strlen(needle)) {
-//         return FAILED;
-//     }
-//     char old_haystack_cp[strlen(haystack) + 5];
-//     char haystack_cp[strlen(haystack) + strlen(needle) + 1];
-//     char needle_cp[strlen(needle) + 1];
-//     strcpy(haystack_cp, haystack);
-//     strcpy(old_haystack_cp, haystack_cp);
-//     strcpy(needle_cp, needle);
-//     int j = 0, i, old_haystack_len = strlen(haystack_cp);
-    
-//     for (i = index; i < index + strlen(needle_cp); i++) {
-//         haystack_cp[i] = needle_cp[j++];    
-//     }
-//     for (i = (index + strlen(needle_cp)); i < strlen(needle_cp) + old_haystack_len; i++) {
-//         printf("i = %c\n", old_haystack_cp[index]);
-//         haystack_cp[i] = old_haystack_cp[index++];
-//     }
-//     haystack_cp[strlen(haystack_cp)] = 0;
-
-//     strcpy(haystack, haystack_cp);
-//     return SUCCESS;
-
-// }
-
-
 int insert_string(char * haystack, size_t haystack_size, char * needle, int index) {
     
     int needle_len = strlen(needle), haystack_len = strlen(haystack);
