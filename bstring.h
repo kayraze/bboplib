@@ -48,9 +48,8 @@ int in_string(char * haystack, char * needle, int is_case_insensitive) {
 int insert_string(char * haystack, size_t haystack_size, char * needle, int index) {
     
     int needle_len = strlen(needle), haystack_len = strlen(haystack);
-    if (haystack_size < (haystack_len + needle_len)) {
+    if (haystack_size < (haystack_len + needle_len))
         return FAILED;
-    }
 
     char old_haystack_cp[haystack_len + 1];
     char haystack_cp[haystack_len + needle_len + 1];
@@ -69,3 +68,13 @@ int insert_string(char * haystack, size_t haystack_size, char * needle, int inde
     return SUCCESS;
 
 }
+
+void strip(char * str) {
+    char* d = str;
+    do {
+        while (*d == ' ') {
+            ++d;
+        }
+    } while (*str++ = *d++);
+}
+
