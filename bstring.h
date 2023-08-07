@@ -1,9 +1,14 @@
 #define TRUE 1
 #define FALSE 0
 
-void lowerstr(char * str) {
+void to_lower_str(char * str) {
     for (int i = 0; i < strlen(str); i++) {
         str[i] = tolower(str[i]);
+    }
+}
+void to_upper_str(char * str) {
+    for (int i = 0; i < strlen(str); i++) {
+        str[i] = toupper(str[i]);
     }
 }
 
