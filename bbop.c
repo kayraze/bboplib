@@ -7,9 +7,9 @@
 int main(int argc, char * argv[]) {
 
     char hay[] = "HELLO WORLD";
-    to_lower_str()(hay);
+    to_lower_str(hay);
     printf("%s\n", hay);
-    if (in_string(hay, "", FALSE)) {
+    if (in_string(hay, "WoRld", TRUE)) {
         printf("in string\n");
     } else {
         printf("not in string\n");
